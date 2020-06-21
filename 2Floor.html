@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>2층 목록</title>
+    <meta charset = "utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script>
+      function removeItem(){
+        document.getElementById("list").removeChild(this);
+        saveList();
+      }
+      function loadList(){
+        document.getElementById("list").innerHTML=localStorage.storedList;
+        for(var i = 0; i < list.children.length;i++)}
+        list.children[i].onclick=removeItem;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>2층 목록</h1>
+    <div class = "addButton">
+      <input type = "button" value = "Add Item" onclick = "addItem();" />
+      <input type="text" id = "box" value="삭제할 품목 이름"/>
+      <input type = "button" value = "Delete Item" onclick = "removeItem();" />
+      <input type = "button" value = "돌아가기" onclick = "location.href='index.html'" />
+    </div>
+      <div class = "list">        이름         유통기한</div>
+
+  </body>
+</html>
